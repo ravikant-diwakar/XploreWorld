@@ -1,0 +1,37 @@
+.spinnerContainer {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spinner {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  background: conic-gradient(#0000 10%, var(--color-light--2));
+  -webkit-mask-image: radial-gradient(
+    circle farthest-side,
+    transparent calc(100% - 8px),
+    black 0
+  ); /* Updated syntax for -webkit-mask-image */
+  mask-image: radial-gradient(
+    circle farthest-side,
+    transparent calc(100% - 8px),
+    black 0
+  ); /* Standard syntax for mask-image */
+  animation: rotate 1.5s infinite linear;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+@media (min-width: 768px) {
+  .loader {
+    width: 3rem;
+    height: 3rem;
+  }
+}

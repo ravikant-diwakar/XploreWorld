@@ -1,0 +1,57 @@
+.login {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+
+  background-image: linear-gradient(
+      rgba(14, 25, 71, 0.6),
+      rgba(14, 25, 71, 0.8)
+    ),
+    url("../login-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 2.5rem 5rem;
+  background-color: var(--color-dark--1);
+  /* min-height: calc(100vh - 2rem); */
+  height: 97vh;
+}
+
+.form {
+  background-color: var(--color-dark--2);
+  border-radius: 7px;
+  padding: 2rem 3rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  /* Different from other form */
+  width: 48rem;
+  margin: 8rem auto;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .login {
+    margin: 0.5rem;
+    padding: 1.5rem 2rem;
+    height: 99vh;
+  }
+
+  .form {
+    padding: 1rem 1.5rem;
+    width: 100%;
+    margin: 10rem auto;
+  }
+
+  .row {
+    gap: 0.25rem;
+  }
+}

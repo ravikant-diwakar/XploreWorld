@@ -1,0 +1,12 @@
+.spinnerFullpage {
+  margin: 2.5rem;
+  height: calc(100vh - 5rem);
+  background-color: var(--color-dark--1);
+}
+
+@media only screen and (max-width: 768px) {
+  .spinnerFullpage {
+    margin: 1rem; /* Reduce margin for mobile devices */
+    height: calc(100vh - 2rem); /* Adjust height for mobile devices */
+  }
+}

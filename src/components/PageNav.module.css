@@ -1,0 +1,144 @@
+/* .nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.nav a:link,
+.nav a:visited {
+  text-decoration: none;
+  color: var(--color-light--2);
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 600;
+} */
+
+/* CSS Modules feature */
+
+/* .nav a:global(.active) {
+  color: var(--color-brand--2);
+}
+
+a.ctaLink:link,
+a.ctaLink:visited {
+  background-color: var(--color-brand--2);
+  color: var(--color-dark--0);
+  padding: 0.8rem 2rem;
+  border-radius: 7px;
+} */
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.menuToggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 2; /* Ensure the button is above the menu */
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.navLinks {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav a:link,
+.nav a:visited {
+  text-decoration: none;
+  color: var(--color-light--2);
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* CSS Modules feature */
+.nav a:global(.active) {
+  color: var(--color-brand--2);
+}
+
+a.ctaLink:link,
+a.ctaLink:visited {
+  background-color: var(--color-brand--2);
+  color: var(--color-dark--0);
+  padding: 0.8rem 2rem;
+  border-radius: 7px;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .menuToggle {
+    display: block;
+    cursor: pointer;
+    padding: 1rem;
+    color: var(--color-brand--3);
+    /* background-color: var(--color-dark--2); */
+    border-radius: 5px;
+    text-align: center;
+  }
+
+  .navLinks {
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    top: 80%;
+    /* height: 80%; */
+    width: 40%;
+    /* left: 0; */
+    right: 2%;
+    background-color: var(--color-brand--2);
+    padding: 1rem;
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 1000;
+    border-radius: 7px;
+  }
+
+  .showMenu {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .navLinks li {
+    width: 100%;
+    text-align: center;
+    /* margin: 0.5rem 0; */
+  }
+
+  .navLinks a {
+    width: 100%;
+    padding: 1rem 0;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+
+  .navLinks a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+}
