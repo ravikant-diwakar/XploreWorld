@@ -6,23 +6,10 @@ export default function About() {
     <main className={styles.about}>
       <PageNav />
       <section>
-        <img
-          src="img-1.jpg"
-          alt="person with dog overlooking mountain with sunset"
-        />
+        <img src="about.png" alt="abc" />
         <div>
-          <h2>About WorldWide.</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo est
-            dicta illum vero culpa cum quaerat architecto sapiente eius non
-            soluta, molestiae nihil laborum, placeat debitis, laboriosam at fuga
-            perspiciatis?
-          </p>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis
-            doloribus libero sunt expedita ratione iusto, magni, id sapiente
-            sequi officiis et.
-          </p>
+          <h2>Time to Travel</h2>
+          <p>Are You Ready?</p>
         </div>
       </section>
     </main>

@@ -1,47 +1,16 @@
-/* .about {
-  margin: 2.5rem;
-  padding: 2.5rem 5rem;
-  background-color: var(--color-dark--1);
-  min-height: calc(100vh - 5rem);
-}
-
-.about section {
-  width: clamp(80rem, 80%, 90rem);
-  margin: 6rem auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 7rem;
-  align-items: center;
-}
-
-.about img {
-  width: 100%;
-  border-radius: 1rem;
-}
-
-.about h2 {
-  font-size: 4rem;
-  line-height: 1.2;
-  margin-bottom: 3rem;
-}
-
-.about p {
-  font-size: 1.6rem;
-  margin-bottom: 2rem;
-}
-
-.about section a {
-  margin-top: 2rem;
-} */
-
 .about {
-  /* margin: 2.5rem; */
   padding: 2.5rem 5rem;
-  background-color: var(--color-dark--1);
-  min-height: calc(100vh - 5rem);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adding a subtle shadow for depth */
-  /* border-radius: 1rem; Rounded corners */
   height: 100vh;
+  margin: 0;
+  min-height: calc(100vh - 5rem);
+  background-image: linear-gradient(rgba(0, 20, 34, 0.6), rgba(0, 16, 27, 0.8)),
+    url("../about1.jpg");
+  background-size: cover;
+  object-fit: fill;
+  background-position: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adding a subtle shadow for depth */
+  position: relative;
+  color: var(--color-light);
 }
 
 .about section {
@@ -65,8 +34,9 @@
 
 .about h2 {
   font-size: 4rem;
-  line-height: 1.2;
-  margin-bottom: 3rem;
+  /* line-height: 1.2; */
+  /* margin-bottom: 3rem; */
+  text-align: center;
   font-weight: bold; /* Make heading bold */
   text-transform: uppercase; /* Transform text to uppercase */
 }
@@ -74,6 +44,7 @@
 .about p {
   font-size: 1.6rem;
   margin-bottom: 2rem;
+  text-align: center;
   line-height: 1.6; /* Improve readability */
 }
 

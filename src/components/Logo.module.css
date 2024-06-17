@@ -5,6 +5,6 @@
 /* Media query for mobile devices */
 @media (max-width: 600px) {
   .logo {
-    height: 7rem; /* Adjusted height for mobile devices */
+    height: 6rem; /* Adjusted height for mobile devices */
   }
 }

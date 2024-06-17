@@ -1,0 +1,155 @@
+.mediaPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* padding: 0;
+  margin: 0; */
+  /* padding: 2.5rem 5rem; */
+}
+
+.videoContainer {
+  width: 100%;
+  height: 700px;
+  overflow: hidden;
+  object-fit: contain;
+  padding: 2.5rem 5rem;
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.pageHeader {
+  width: 100%;
+  padding: 2.5rem 5rem;
+  /* background-color: rgba(16, 30, 80, 0.7); Semi-transparent background */
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.galleryHeading {
+  margin-top: 40px;
+  font-size: 40px;
+  color: #101e50;
+  text-align: center;
+}
+
+.gallery,
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.photo {
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.9s ease; /* Smooth transition for hover effect */
+}
+
+.photo {
+  width: 200px;
+  height: 200px;
+  background-color: #7c53e4;
+}
+
+.photo img:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.footer {
+  color: #101e50; /* White text color */
+  text-align: center; /* Center the text */
+  padding: 20px; /* Add some padding */
+  bottom: 0;
+  width: 100%;
+}
+
+.copyright {
+  margin: auto; /* Remove default margin */
+  font-size: 14px; /* Set font size */
+}
+
+.overlayText {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.heading {
+  font-size: 4rem;
+  font-family: "Trebuchet MS", sans-serif;
+  margin: 0;
+}
+
+.subheading {
+  font-size: 2em;
+  font-family: "Courier New", monospace;
+  text-align: center;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .videoContainer {
+    margin: 0;
+    padding: 1.5rem 2rem;
+    height: 100vh;
+  }
+  .photo,
+  .feature {
+    width: 100%;
+    height: auto;
+  }
+  .galleryHeading {
+    font-size: 30px;
+  }
+}
+
+/* Media query for mobile devices */
+@media (max-width: 600px) {
+  .overlayText {
+    padding: 5px;
+    left: 70px;
+    right: 70px;
+    transform: none;
+  }
+
+  .heading {
+    font-size: 1.7rem;
+    text-align: center;
+    width: 100%;
+  }
+
+  .subheading {
+    font-size: 1rem;
+    width: 100%;
+  }
+}
