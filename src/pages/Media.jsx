@@ -1,4 +1,4 @@
-import styles from "./Media.module.css";
+import styles from "./media.module.css";
 import PageNav from "../components/PageNav";
 
 export default function Media() {
