@@ -1,99 +1,267 @@
 .about {
-  padding: 2.5rem 5rem;
-  height: 100vh;
-  margin: 0;
-  min-height: calc(100vh - 5rem);
-  background-image: linear-gradient(rgba(0, 20, 34, 0.6), rgba(0, 16, 27, 0.8)),
-    url("../about1.jpg");
-  background-size: cover;
-  object-fit: fill;
-  background-position: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adding a subtle shadow for depth */
-  position: relative;
-  color: var(--color-light);
+    padding: 2.5rem 5rem;
+    position: relative;
+    /* Make sure .about content is above the image */
+    z-index: 1;
+    margin-top: 0;
 }
 
-.about section {
-  width: clamp(80rem, 80%, 90rem);
-  margin: 6rem auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 7rem;
-  align-items: center;
-}
-
-.about img {
-  width: 100%;
-  border-radius: 1rem;
-  transition: transform 0.3s ease; /* Smooth transition for hover effect */
-}
-
-.about img:hover {
-  transform: scale(1.05); /* Slight zoom on hover */
-}
-
-.about h2 {
-  font-size: 4rem;
-  /* line-height: 1.2; */
-  /* margin-bottom: 3rem; */
-  text-align: center;
-  font-weight: bold; /* Make heading bold */
-  text-transform: uppercase; /* Transform text to uppercase */
-}
-
-.about p {
-  font-size: 1.6rem;
-  margin-bottom: 2rem;
-  text-align: center;
-  line-height: 1.6; /* Improve readability */
-}
-
-.about section a {
-  margin-top: 2rem;
-  display: inline-block; /* Ensure it respects margin-top */
-  padding: 1rem 2rem; /* Add padding for better click area */
-  text-decoration: none; /* Remove underline */
-  border: 2px solid currentColor; /* Border matching text color */
-  border-radius: 0.5rem; /* Rounded corners */
-  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effect */
-}
-
-.about section a:hover {
-  background-color: currentColor; /* Change background color on hover */
-  color: var(--color-dark--1); /* Change text color on hover */
-}
-
-/* Media query for mobile devices */
-@media (max-width: 768px) {
-  .about {
-    margin: 0;
-    padding: 1.5rem 2rem;
-    height: 100vh;
-  }
-
-  .about section {
+.aboutHero {
+    position: absolute;
+    /* Ensure it stays at the top */
+    top: 0;
+    left: 0;
     width: 100%;
-    margin: 2rem auto;
-    display: block;
+    height: 100vh;
+    /* Full viewport height */
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url('https://images.unsplash.com/photo-1488646953014-85cb44e25828') center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 0 2rem;
+    z-index: -1;
+    /* Ensure the image stays behind the content */
+}
+
+.aboutHero h1 {
+    font-size: clamp(3.5rem, 5vw, 6rem);
+    /* Large text size for the title */
+    margin-bottom: 1rem;
+}
+
+.aboutHero p {
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    /* Larger text for description */
+}
+
+
+.ourStory {
+    margin-top: 600px;
+}
+
+.ourStory,
+.servicesSection,
+.achievementsSection,
+.testimonialsSection,
+.awardsSection {
+    padding: 4rem 1rem;
+}
+
+.storyContent {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    align-items: center;
+}
+
+.storyText p {
+    margin-bottom: 1.5rem;
+    color: rgb(0, 0, 0);
+    line-height: 1.6;
+    font-size: clamp(1.3rem, 2vw, 1.8rem);
+    /* Increased font size */
+}
+
+.storyImage img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.servicesGrid,
+.achievementsGrid,
+.awardsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
-  }
+    margin-top: 2rem;
+}
 
-  .about img {
-    margin-bottom: 2rem;
-  }
+.serviceCard p {
+    font-size: 1.5rem;
+    color: #555;
+}
 
-  .about h2 {
-    font-size: 2.5rem;
+.testimonialsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.serviceCard,
+.achievementCard,
+.awardCard,
+.testimonialCard {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.serviceCard:hover,
+.achievementCard:hover,
+.awardCard:hover,
+.testimonialCard:hover {
+    transform: translateY(-5px);
+}
+
+.achievementCard h3 {
+    font-size: 3rem;
+    /* Increased size */
+    color: #3498db;
+    margin-bottom: 0.5rem;
+}
+
+.achievementCard p {
+    font-size: 1.5rem;
+    color: #555;
+}
+
+.testimonialContent {
+    position: relative;
+    padding: 1rem;
+}
+
+.testimonialContent p {
+    font-style: italic;
     margin-bottom: 1.5rem;
-  }
+    color: #555;
+}
 
-  .about p {
-    font-size: 1.4rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .about section a {
+.testimonialAuthor {
     margin-top: 1rem;
-    padding: 0.75rem 1.5rem;
-  }
+}
+
+.testimonialAuthor h4 {
+    color: #2c3e50;
+    margin-bottom: 1.25rem;
+}
+
+.testimonialAuthor p {
+    color: #666;
+    font-size: 1.5rem;
+    /* Increased size */
+}
+
+.awardCard h3 {
+    color: #e67e22;
+    margin-bottom: 1.5rem;
+}
+
+.awardCard p {
+    font-size: 1.5rem;
+    color: #2c3e50;
+}
+
+h2 {
+    text-align: center;
+    font-size: clamp(3rem, 4vw, 4.5rem);
+    /* Increased for larger headings */
+    margin-bottom: 2rem;
+    color: #0a1e32;
+}
+
+h3 {
+    margin-bottom: 1rem;
+    color: #2c3e50;
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    /* Increased for better visibility */
+}
+
+@media (max-width: 768px) {
+
+    .about {
+        margin: 0;
+        padding: 1.5rem 2rem;
+        height: 100vh;
+    }
+
+    .aboutHero {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+    }
+
+    .aboutHero h1 {
+        font-size: clamp(1.5rem, 5vw, 6rem);
+        /* Large text size for the title */
+        margin-bottom: 1rem;
+        margin-top: 8rem;
+    }
+
+    .aboutHero p {
+        font-size: clamp(1.5rem, 3vw, 2.5rem);
+        /* Larger text for description */
+    }
+
+    .ourStory {
+        margin-top: 150px;
+    }
+
+    .storyContent {
+        grid-template-columns: 1fr;
+    }
+
+    .servicesGrid,
+    .achievementsGrid,
+    .testimonialsGrid,
+    .awardsGrid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .serviceCard,
+    .achievementCard,
+    .testimonialCard,
+    .awardCard {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .about {
+        margin: 0;
+        padding: 1.5rem 2rem;
+        height: 100vh;
+    }
+
+    .aboutHero {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+    }
+
+    .aboutHero h1 {
+        font-size: clamp(4rem, 5vw, 6rem);
+        /* Large text size for the title */
+        margin-bottom: 1rem;
+        margin-top: 8rem;
+    }
+
+    .aboutHero p {
+        font-size: clamp(1.5rem, 3vw, 2.5rem);
+        /* Larger text for description */
+    }
+
+    .ourStory {
+        margin-top: 750px;
+    }
+
+
+    .ourStory,
+    .servicesSection,
+    .achievementsSection,
+    .testimonialsSection,
+    .awardsSection {
+        padding: 2rem 1rem;
+    }
 }
