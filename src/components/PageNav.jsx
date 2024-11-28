@@ -28,7 +28,11 @@ function PageNav() {
           </NavLink>
         </li>
         <li>
-          <NavLink to="/login" onClick={() => setIsOpen(false)}>
+          <NavLink
+            to="/login"
+            className={`${styles.loginButton}`}
+            onClick={() => setIsOpen(false)}
+          >
             Login
           </NavLink>
         </li>
