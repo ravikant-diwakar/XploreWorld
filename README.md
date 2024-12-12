@@ -68,6 +68,13 @@ XploreWorld is a web application designed to explore cities and countries, offer
 
 If you have any suggestions, feature requests, or find any bugs, feel free to open an issue or submit a pull request. Your contributions are greatly appreciated!
 
+## How It Works
+
+1. **CitiesContext** handles all the city data, fetching, creating, and deleting cities via API calls.
+2. **FakeAuthContext** is used to manage the user's authentication state and login flow.
+3. **Geolocation**: The user's position is obtained using the `useGeolocation` hook, allowing the app to provide a location-based experience.
+4. **App Routing**: The app uses React Router for navigating between components. Locations can be passed via URL query parameters, making it easy to share specific positions.
+
 ## Future Enhancements
 
 - **User Authentication**: Implementing user login and personalized data storage.
